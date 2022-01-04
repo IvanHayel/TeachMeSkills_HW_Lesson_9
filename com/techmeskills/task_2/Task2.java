@@ -35,15 +35,15 @@ public class Task2 {
 
     private static void displayLongestWord(String text) {
         LinkedList<String> words = getListOfWords(text);
-        String shortestWord = words.removeFirst();
+        String longestWord = words.removeFirst();
         while (!words.isEmpty()) {
-            if (shortestWord.length() <= words.getFirst().length()) {
-                shortestWord = words.removeFirst();
+            if (longestWord.length() <= words.getFirst().length()) {
+                longestWord = words.removeFirst();
             } else {
                 words.removeFirst();
             }
         }
-        System.out.println("Longest word: " + shortestWord);
+        System.out.println("Longest word: " + longestWord);
     }
 
     private static LinkedList<String> getListOfWords(String text) {
